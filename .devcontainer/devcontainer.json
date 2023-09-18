@@ -1,0 +1,49 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java-postgres
+{
+	"name": "Java & PostgreSQL",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "18.17.1",
+			"nvmVersion": "0.39"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"vmware.vscode-boot-dev-pack",
+				"vscjava.vscode-lombok",
+				"vmware.vscode-spring-boot",
+				"esbenp.prettier-vscode",
+				"k--kato.intellij-idea-keybindings",
+				"mwpb.java-prettier-formatter",
+				"EQuimper.react-native-react-redux",
+				"vsce-toolroom.vscode-beautify",
+				"adrianwilczynski.format-selection-as-html",
+				"ms-ossdata.vscode-postgresql",
+				"zhang-renyang.chat-gpt",
+				"ChakrounAnas.turbo-console-log",
+				"cweijan.vscode-postgresql-client2",
+				"WallabyJs.console-ninja",
+				"rangav.vscode-thunder-client",
+				"DotJoshJohnson.xml",
+				"c0der-himel.remove-console-log",
+				"streetsidesoftware.code-spell-checker"
+			]
+		}
+	},
+	"forwardPorts": [8080,5432],
+
+	"postCreateCommand":"nohup sh -c 'cd BlogAPI && mvn install && mvn spring-boot:run &'",
+
+	"postStartCommand":"nohup bash -c 'cd blog-ui && npm install; npm start &'"
+	
+	
+
+
+}
