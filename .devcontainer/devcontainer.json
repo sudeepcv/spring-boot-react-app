@@ -37,11 +37,11 @@
 			]
 		}
 	},
-	"forwardPorts": [8080,5432],
+	"forwardPorts": [8080,5432]
 
-	"postCreateCommand":"nohup sh -c 'cd BlogAPI && mvn install && mvn spring-boot:run &'",
+	// "postCreateCommand":"nohup sh -c 'cd BlogAPI && mvn install && mvn spring-boot:run &'",
 
-	"postStartCommand":"nohup bash -c 'cd blog-ui && npm install; npm start &'"
+	// "postStartCommand":"nohup bash -c 'cd blog-ui && npm install; npm start &'"
 	
 	
 
