@@ -14,8 +14,8 @@ Before you begin, ensure you have the following tools installed:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/sudeepcv/spring-boot-react-app
+   cd spring-boot-react-app
 
 
 Open the repository in Visual Studio Code:
